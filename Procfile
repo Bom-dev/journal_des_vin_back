@@ -1,0 +1,1 @@
+web: gunicorn journal_des_vin_back.wsgi --log-file -
