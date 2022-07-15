@@ -31,4 +31,4 @@ class WineSerializer(serializers.HyperlinkedModelSerializer):
         depth = 1
         model = Wine
         fields = ('id', 'name', 'type', 'grape', 'country',
-                 'price', 'label', 'link', 'winemaker_id')
+                 'price', 'label', 'link', 'winemaker', 'winemaker_id')
