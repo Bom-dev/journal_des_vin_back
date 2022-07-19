@@ -15,11 +15,11 @@ This is a wine cellar on your phone. It displays the whole list from the databas
 
 #### Backend
 
-Python, Django, Django REST framework, Heroku
+- Python, Django, Django REST framework, Heroku
 
 #### React Native
 
-React Native, Axios, Expo Go, Ionicons
+- React Native, Axios, Expo Go, Ionicons
 
 ## Wire Frames
 
