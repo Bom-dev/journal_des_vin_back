@@ -33,6 +33,8 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = []
 
+ACCESS_CONTROL_ALLOW_ORIGIN = ['*']
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
@@ -51,11 +53,11 @@ INSTALLED_APPS = [
     'journal_des_vin',
     'django_extensions',
     'rest_framework',
-    # 'corsheaders',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    # 'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -67,37 +69,37 @@ MIDDLEWARE = [
 ]
 
 
-# CORS_ALLOWED_ORIGINS = [
-#     "https://domain.com",
-#     "https://api.domain.com",
-#     "http://localhost:19006",
-#     "http://127.0.0.1:8000"
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "https://domain.com",
+    "https://api.domain.com",
+    "http://localhost:19006",
+    "http://127.0.0.1:8000"
+]
 
-# CORS_ALLOWED_ORIGIN_REGEXES = [
-#     r"^https://\w+\.domain\.com$",
-# ]
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://\w+\.domain\.com$",
+]
 
-# CORS_ALLOW_METHODS = [
-#     'DELETE',
-#     'GET',
-#     'OPTIONS',
-#     'PATCH',
-#     'POST',
-#     'PUT',
-# ]
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
-# CORS_ALLOW_HEADERS = [
-#     'accept',
-#     'accept-encoding',
-#     'authorization',
-#     'content-type',
-#     'dnt',
-#     'origin',
-#     'user-agent',
-#     'x-csrftoken',
-#     'x-requested-with',
-# ]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 ROOT_URLCONF = 'journal_des_vin_back.urls'
 
