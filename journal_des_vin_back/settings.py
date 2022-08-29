@@ -71,8 +71,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://domain.com",
     "https://api.domain.com",
     "http://localhost:19006",
-    "http://127.0.0.1:8000",
-    "https://aidenshaw-blogpagefrontend.herokuapp.com"
+    "http://127.0.0.1:8000"
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
